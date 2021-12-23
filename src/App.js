@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { useState } from "react";
+import { Header } from "./components/Header";
+import { Shoplist } from "./components/Shoplist";
+
+
+export const ShopContext = React.createContext();
+
+const App = () => {
+
+  const [cart, setCart] = useState([]);
+
+  const addProduct = (el) => {
+    setCart([...cart, el]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ShopContext.Provider value={{
+      cart,
+      addProduct
+    }}>
+      <div className="App">
+        <Header />
+        <Shoplist />
+      </div>
+    </ShopContext.Provider>
   );
 }
 

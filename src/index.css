@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  padding: 20px 0;
+  background-color: blueviolet;
+  color: #fff;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.list {
+  margin: 60px auto;
+}
+
+.product {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.product button {
+  padding: 10px 25px;
+  border: 0;
+  background-color: blueviolet;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
