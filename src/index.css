@@ -49,3 +49,34 @@ code {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.active {
+  font-weight: bold;
+  color: yellow;
+}
+
+.section1 {
+  height: 120vh;
+  background-color: cadetblue;
+}
+
+.section2 {
+  height: 120vh;
+  background-color: bisque;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.wrapper {
+  padding-top: 60px;
+}
+
+.nav a {
+  display: inline-block;
+  margin: 0 15px;
+}
