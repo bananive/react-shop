@@ -13,7 +13,20 @@ const App = () => {
   let Element   = Scroll.Element;
 
   const addProduct = (el) => {
-    setCart([...cart, el]);
+
+    let elIndex;
+
+    const arr = cart.filter((item, i) => {
+      if( item.id === el.id) elIndex = i;
+      return item.id === el.id;
+    });
+
+    if(arr.length === 0) {
+      setCart([...cart, el]);
+    } else {
+      cart[elIndex].count = cart[elIndex].hasOwnProperty('count') ? cart[elIndex].count + 1 : 2;
+      console.log(cart[elIndex].count);
+    }
   }
 
   return (
